@@ -145,11 +145,6 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">2000</stringProp>
-          <stringProp name="RandomTimer.range">1900</stringProp>
-        </GaussianRandomTimer>
-        <hashTree/>
         <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Randomly search once or multiple times" enabled="true">
           <stringProp name="TestPlan.comments">different users may search for the same data (currently each thread take one value...so need to add this for simulation)</stringProp>
           <intProp name="InterleaveControl.style">1</intProp>
