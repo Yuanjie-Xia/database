@@ -146,12 +146,12 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller - Delete person" enabled="true">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller - POST" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
           <stringProp name="LoopController.loops">${looptimes}</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
               <collectionProp name="Arguments.arguments">
@@ -169,7 +169,7 @@
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person</stringProp>
+            <stringProp name="HTTPSampler.path">${__V(url${number})}</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -180,26 +180,89 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
-            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-            <stringProp name="RegexExtractor.refname">uuid</stringProp>
-            <stringProp name="RegexExtractor.regex">&quot;uuid&quot;:&quot;(.+?)&quot;,&quot;display</stringProp>
-            <stringProp name="RegexExtractor.template">$1$</stringProp>
-            <stringProp name="RegexExtractor.default"></stringProp>
-            <stringProp name="RegexExtractor.match_number">1</stringProp>
-            <boolProp name="RegexExtractor.default_empty_value">true</boolProp>
-            <stringProp name="Scope.variable">Add person</stringProp>
-          </RegexExtractor>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">${number}==1</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">import java.text.*;
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+String filename = &quot;${workloadFile}&quot;;
+log.info(&quot;######filename: {}&quot;,filename);
+log.info(&quot;######count: {}&quot;,${number});
+
+
+try {
+    File file = new File(filename);
+
+    if (!file.exists()) {
+        throw new Exception (&quot;ERROR: file &quot; + filename + &quot; not found&quot;);
+    }
+
+    BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
+    String line = null;
+    Integer i = 1;
+
+    while((line = bufRdr.readLine()) != null) {
+    	   String[] group_timestamp = line.split(&quot;,&quot;);
+    	   String group = group_timestamp[1];
+    	   if(group.equals(&quot;POST&quot;)){
+//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;url&quot;+i,group_timestamp[3]);
+    	   }
+        i++;
+    }
+     bufRdr.close();            
+}
+catch (Exception ex) {
+    IsSuccess = false; 
+    log.error(ex.getMessage());
+}
+catch (Throwable thex) {
+    log.error(thex.getMessage());
+}
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          </ConstantTimer>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete person" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller - DELETE" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;names&quot;:[{&quot;givenName&quot;: &quot;thisisanewuser&quot;,&#xd;
+&quot;familyName&quot;:&quot;newusersimpletest&quot;}],&#xd;
+&quot;gender&quot;:&quot;F&quot;,&#xd;
+&quot;age&quot;:&quot;50&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person/${uuid}?purge=true</stringProp>
+            <stringProp name="HTTPSampler.path">${__V(url${number})}</stringProp>
             <stringProp name="HTTPSampler.method">DELETE</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -241,10 +304,92 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
-    	   if(group.equals(&quot;DELETE url2&quot;)){
+    	   if(group.equals(&quot;DELETE&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
-    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
+    	   	vars.put(&quot;url&quot;+i,group_timestamp[3]);
+    	   }
+        i++;
+    }
+     bufRdr.close();            
+}
+catch (Exception ex) {
+    IsSuccess = false; 
+    log.error(ex.getMessage());
+}
+catch (Throwable thex) {
+    log.error(thex.getMessage());
+}
+</stringProp>
+              <stringProp name="BeanShellSampler.filename"></stringProp>
+              <stringProp name="BeanShellSampler.parameters"></stringProp>
+              <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+            </BeanShellSampler>
+            <hashTree/>
+          </hashTree>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+        </hashTree>
+        <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Loop Controller - GET" enabled="true">
+          <intProp name="InterleaveControl.style">1</intProp>
+        </RandomController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">${__V(url${number})}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">${number}==1</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+              <stringProp name="BeanShellSampler.query">import java.text.*;
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+String filename = &quot;${workloadFile}&quot;;
+log.info(&quot;######filename: {}&quot;,filename);
+log.info(&quot;######count: {}&quot;,${number});
+
+
+try {
+    File file = new File(filename);
+
+    if (!file.exists()) {
+        throw new Exception (&quot;ERROR: file &quot; + filename + &quot; not found&quot;);
+    }
+
+    BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
+    String line = null;
+    Integer i = 1;
+
+    while((line = bufRdr.readLine()) != null) {
+    	   String[] group_timestamp = line.split(&quot;,&quot;);
+    	   String group = group_timestamp[1];
+    	   if(group.equals(&quot;GET&quot;)){
+//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;url&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
