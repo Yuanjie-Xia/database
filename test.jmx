@@ -212,7 +212,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;POST&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[3]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;url&quot;+i,group_timestamp[3]);
     	   }
