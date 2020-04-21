@@ -195,16 +195,13 @@ try {
 
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
-    	   String group = group_timestamp[1];
+    	   String group = group_timestamp[2];
     	   
-    	   log.info(&quot;info: {}&quot;,group_timestamp[1]);
-    	   log.info(&quot;info: {}&quot;,group_timestamp[2]);
-    	   log.info(&quot;info: {}&quot;,group_timestamp[3]);
     	   
     	   if(group.equals(&quot;GET_url6&quot;)){
-    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
-    	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
+    	   	log.info(&quot;true&quot;);
+    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
