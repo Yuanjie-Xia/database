@@ -190,6 +190,7 @@ try {
     	   if(group.equals(&quot;DELETE url2&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -452,6 +453,7 @@ try {
     	   if(group.equals(&quot;GET url3&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -483,7 +485,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person?q=${__urlencode(${PERSON_NAME})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person?q=${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -674,6 +676,7 @@ try {
     	   if(group.equals(&quot;GET url8&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -705,7 +708,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person/${__urlencode(${PERSON})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person/${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
@@ -896,6 +899,7 @@ try {
     	   if(group.equals(&quot;GET url7&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -927,7 +931,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/obs?patient=${__urlencode(${PATIENT})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/obs?patient=${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1118,6 +1122,7 @@ try {
     	   if(group.equals(&quot;GET url5&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -1149,7 +1154,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__urlencode(${PERSON})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1340,6 +1345,7 @@ try {
     	   if(group.equals(&quot;GET url4&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -1371,7 +1377,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encountertype?q=${ENCOUNTER_TYPE}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encountertype?q=${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1562,6 +1568,7 @@ try {
     	   if(group.equals(&quot;GET url6&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
@@ -1593,7 +1600,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/concept?q=${__urlencode(${CONCEPT_NAME})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/concept?q=${__V(id${number})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -1786,6 +1793,7 @@ try {
     	   if(group.equals(&quot;POST url1&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
