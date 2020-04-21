@@ -15,7 +15,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="workloadFile" elementType="Argument">
             <stringProp name="Argument.name">workloadFile</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/openmrs_action_workload.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/action_workload.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
