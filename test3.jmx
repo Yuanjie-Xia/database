@@ -198,11 +198,11 @@ try {
     	   String group = group_timestamp[2];
     	   String time=group_timestamp[1];
     	   String id=group_timestamp[3]
-    	   log.info(&quot;Btime&quot;,time);
-    	   	log.info(&quot;Bid&quot;,id);
+    	   log.info(&quot;Btime&quot;+time);
+    	   	log.info(&quot;Bid&quot;+id);
     	   if(group.equals(&quot;GET_url6&quot;)){
-    	   	log.info(&quot;time&quot;,time);
-    	   	log.info(&quot;id&quot;,id);
+    	   	log.info(&quot;time&quot;+time);
+    	   	log.info(&quot;id&quot;+id);
     	   	vars.put(&quot;timestamp&quot;+i,time);
     	   	vars.put(&quot;id&quot;+i,id);
     	   }
