@@ -15,10 +15,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">8281</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -274,10 +274,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">10594</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -502,10 +502,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">4878</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -720,10 +720,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">3675</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -937,10 +937,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">2564</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -1155,10 +1155,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">3329</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -1372,10 +1372,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">4249</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -1587,10 +1587,10 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">6542</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">30</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
