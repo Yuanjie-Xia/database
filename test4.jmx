@@ -27,9 +27,9 @@
       <hashTree>
         <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments">
-            <elementProp name="url8" elementType="Argument">
-              <stringProp name="Argument.name">url8</stringProp>
-              <stringProp name="Argument.value">/home/yuanjiexia/database/url8.csv</stringProp>
+            <elementProp name="workloadFile" elementType="Argument">
+              <stringProp name="Argument.name">workloadFile</stringProp>
+              <stringProp name="Argument.value">/home/yuanjiexia/database/workloadFile.csv</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -177,7 +177,7 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-String filename = &quot;${url8}&quot;;
+String filename = &quot;${workloadFile}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
 log.info(&quot;######count: {}&quot;,${number});
 
@@ -195,11 +195,12 @@ try {
 
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
-    	  
-    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
+    	   String group=group_timestamp[2]
+    	    if(group.equals(&quot;GET url8&quot;)){
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[3]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
-    	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
-    	   
+    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
+    	    }
         i++;
     }
      bufRdr.close();            
