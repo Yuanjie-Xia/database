@@ -1080,7 +1080,7 @@ catch (Throwable thex) {
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/obs?patient=${PERSON}</stringProp>
+            <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/obs?patient=﻿dd553355-1691-11df-97a5-7038c432aabf</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
