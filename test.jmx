@@ -255,7 +255,6 @@ try {
     	   if(group.equals(&quot;DELETE url2&quot;)){
 //    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
-    	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
     }
