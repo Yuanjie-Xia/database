@@ -219,7 +219,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
@@ -359,7 +359,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search person" enabled="true">
@@ -459,7 +459,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get person data" enabled="true">
@@ -559,7 +559,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get observation for patient" enabled="true">
@@ -659,7 +659,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get encounter for patient" enabled="true">
@@ -759,7 +759,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="get by encounter type " enabled="true">
@@ -859,7 +859,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get concept by name" enabled="true">
@@ -962,7 +962,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}*1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
