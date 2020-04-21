@@ -166,7 +166,7 @@
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -197,7 +197,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;DELETE_url2&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -438,7 +438,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -469,7 +469,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url3&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -670,7 +670,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -701,7 +701,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url8&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -902,7 +902,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -933,7 +933,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url7&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -1134,7 +1134,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -1165,7 +1165,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url5&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -1366,7 +1366,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -1397,7 +1397,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url4&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -1598,7 +1598,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -1629,7 +1629,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;GET_url6&quot;)){
-   	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
@@ -1832,7 +1832,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${number}==1</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -1863,7 +1863,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   if(group.equals(&quot;POST_url1&quot;)){
-//    	   	log.info(&quot;timestamp: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[0]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[2]);
     	   }
