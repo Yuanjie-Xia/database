@@ -197,8 +197,8 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   String group = group_timestamp[1];
     	   
-    	   log.info(&quot;Btimestamp&quot;,group_timestamp[1]);
-    	   log.info(&quot;Btype&quot;,group_timestamp[2]);
+    	   log.info(&quot;Btimestamp&quot;,valueOf(group_timestamp[1]));
+    	   log.info(&quot;Btype&quot;,valueOf(group_timestamp[2]));
     	   log.info(&quot;Bid: {}&quot;,group_timestamp[3]);
     	   
     	   if(group.equals(&quot;GET_url6&quot;)){
