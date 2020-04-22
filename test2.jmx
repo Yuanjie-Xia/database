@@ -179,7 +179,7 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-String filename = &quot;${workloadFile}&quot;;
+String filename = &quot;${url1}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
 log.info(&quot;######count: {}&quot;,${number});
 
