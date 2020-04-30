@@ -199,7 +199,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
-    	   	//log.info(&quot;time: {}&quot;,group_timestamp[1]);
+    	   	log.info(&quot;time: {}&quot;,group_timestamp[1]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
