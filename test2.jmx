@@ -688,7 +688,7 @@ try {
 
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
-    	   //String group=group_timestamp[2]
+    	   String group=group_timestamp[0]
     	   if(group_timestamp[2].equals(&quot;GET_url5&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
     	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
