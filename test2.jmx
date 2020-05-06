@@ -148,7 +148,7 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User1" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url1" elementType="Argument">
               <stringProp name="Argument.name">url1</stringProp>
@@ -269,7 +269,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User2" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url2" elementType="Argument">
               <stringProp name="Argument.name">url2</stringProp>
@@ -419,7 +419,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User3" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url3" elementType="Argument">
               <stringProp name="Argument.name">url3</stringProp>
@@ -529,7 +529,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User4" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url4" elementType="Argument">
               <stringProp name="Argument.name">url4</stringProp>
@@ -639,7 +639,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User5" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url5" elementType="Argument">
               <stringProp name="Argument.name">url5</stringProp>
@@ -749,7 +749,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User6" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url6" elementType="Argument">
               <stringProp name="Argument.name">url6</stringProp>
@@ -859,7 +859,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User7" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url7" elementType="Argument">
               <stringProp name="Argument.name">url7</stringProp>
@@ -969,7 +969,7 @@ catch (Throwable thex) {
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User8" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="url8" elementType="Argument">
               <stringProp name="Argument.name">url8</stringProp>
