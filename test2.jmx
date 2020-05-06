@@ -136,13 +136,13 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">34452</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19170</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -166,6 +166,10 @@
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -200,7 +204,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
     	   	//log.info(&quot;time: {}&quot;,group_timestamp[1]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -221,10 +225,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -259,11 +259,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">34132</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19161</stringProp>
         <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -287,6 +287,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp2${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -321,7 +325,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;DELETE_url2&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[1]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp2&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -341,10 +345,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -409,11 +409,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">20480</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19171</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -437,6 +437,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp3${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -471,7 +475,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url3&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp3&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -491,10 +495,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search person" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -519,11 +519,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">44290</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19162</stringProp>
         <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -547,6 +547,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp4${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -581,7 +585,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url4&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp4&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -601,10 +605,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="get by encounter type " enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -629,11 +629,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">8839</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19167</stringProp>
         <stringProp name="ThreadGroup.delay">9</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -657,6 +657,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp5${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -691,7 +695,7 @@ try {
     	   //String group=group_timestamp[0]
     	   if(group_timestamp[2].equals(&quot;GET_url5&quot;)){
     	   	log.info(&quot;id: {}&quot;,group_timestamp[0]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp5&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -711,10 +715,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get encounter for patient" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -739,11 +739,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">63670</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19159</stringProp>
         <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -767,6 +767,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp6${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -801,7 +805,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url6&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp6&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -821,10 +825,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get concept by name" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -849,11 +849,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">19262</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19153</stringProp>
         <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -877,6 +877,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp7${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -911,7 +915,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url7&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp7&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -931,10 +935,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get observation for patient" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -959,11 +959,11 @@ catch (Throwable thex) {
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">15236</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">19163</stringProp>
         <stringProp name="ThreadGroup.delay">7</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -987,6 +987,10 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp8${number})}</stringProp>
+        </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
@@ -1021,7 +1025,7 @@ try {
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url8&quot;)){
     	   	//log.info(&quot;id: {}&quot;,group_timestamp[2]);
-    	   	vars.put(&quot;timestamp&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp8&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -1041,10 +1045,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get person data" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
