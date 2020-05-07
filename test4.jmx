@@ -167,6 +167,10 @@
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1${__iterationNum}}</stringProp>
+        </ConstantTimer>
+        <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
@@ -221,10 +225,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1${__iterationNum}}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
