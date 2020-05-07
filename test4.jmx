@@ -157,7 +157,7 @@
         </Arguments>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp5$count)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp5$${__iterationNum})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -195,7 +195,6 @@ try {
     	   	log.info(&quot;time5: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp5&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	vars.put(&quot;count&quot;,i);
     	   }
         i++;
     }
@@ -222,7 +221,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id$count)}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id$${__iterationNum})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
