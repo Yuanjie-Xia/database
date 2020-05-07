@@ -168,7 +168,7 @@
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1${__iterationNum}}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1$s1)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -289,7 +289,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp2${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp2$s2)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -439,7 +439,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp3${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp3$s3)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -549,7 +549,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp4${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp4$s4)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -712,7 +712,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp5${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp5$s5)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get encounter for patient" enabled="true">
@@ -769,7 +769,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp6${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp6$s6)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -879,7 +879,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp7${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp7$s7)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -989,7 +989,7 @@ catch (Throwable thex) {
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp8${__iterationNum})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp8$s8)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
