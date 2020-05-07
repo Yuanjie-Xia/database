@@ -153,6 +153,11 @@
               <stringProp name="Argument.value">/home/yuanjiexia/database/url5.csv</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="counter" elementType="Argument">
+              <stringProp name="Argument.name">counter</stringProp>
+              <stringProp name="Argument.value">${__iterationNum}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -230,7 +235,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id${__iterationNum})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id$counter)}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
