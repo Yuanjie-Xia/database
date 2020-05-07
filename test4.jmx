@@ -166,7 +166,7 @@
         </CounterConfig>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp5${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp5${__iterationNum})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
