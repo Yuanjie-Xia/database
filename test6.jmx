@@ -141,7 +141,7 @@
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">22199</stringProp>
+        <stringProp name="ThreadGroup.duration">20</stringProp>
         <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
@@ -202,7 +202,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;GET_url7&quot;)){
-    	   	log.info(&quot;time7: {}&quot;,group_timestamp[0]);
+    	   	log.info(&quot;time7: {}&quot;,${__iterationNum});
     	   	vars.put(&quot;timestamp7&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
