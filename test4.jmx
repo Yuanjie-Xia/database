@@ -158,17 +158,17 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter1" enabled="true">
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s1</stringProp>
+          <stringProp name="CounterConfig.name">n1</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n1} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -181,7 +181,7 @@ import java.util.*;
 
 String filename = &quot;${url1}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n1});
 
 
 try {
@@ -222,7 +222,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1$s1)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1$n1)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
@@ -283,13 +283,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s2</stringProp>
+          <stringProp name="CounterConfig.name">n2</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n2} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -302,7 +302,7 @@ import java.util.*;
 
 String filename = &quot;${url2}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n2});
 
 
 try {
@@ -342,7 +342,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp2$s2)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp2$n2)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
@@ -433,13 +433,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s3</stringProp>
+          <stringProp name="CounterConfig.name">n3</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n3} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -452,7 +452,7 @@ import java.util.*;
 
 String filename = &quot;${url3}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n3});
 
 
 try {
@@ -492,7 +492,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp3$s3)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp3$n3)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search person" enabled="true">
@@ -503,7 +503,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person?q=${__V(id${__iterationNum})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person?q=${__V(id${n3})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -543,13 +543,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s4</stringProp>
+          <stringProp name="CounterConfig.name">n4</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n4} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -562,7 +562,7 @@ import java.util.*;
 
 String filename = &quot;${url4}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n4});
 
 
 try {
@@ -602,7 +602,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp4$s4)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp4$n4)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="get by encounter type " enabled="true">
@@ -613,7 +613,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encountertype?q=${__V(id${__iterationNum})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encountertype?q=${__V(id${n4})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -653,13 +653,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s5</stringProp>
+          <stringProp name="CounterConfig.name">n5</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n5} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -672,7 +672,7 @@ import java.util.*;
 
 String filename = &quot;${url5}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n5});
 
 
 try {
@@ -712,7 +712,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp5$s5)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp5$n5)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get encounter for patient" enabled="true">
@@ -723,7 +723,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id${__iterationNum})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encounter?patient=${__V(id${n5})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -763,13 +763,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s6</stringProp>
+          <stringProp name="CounterConfig.name">n6</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n6} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -782,7 +782,7 @@ import java.util.*;
 
 String filename = &quot;${url6}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n6});
 
 
 try {
@@ -822,7 +822,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp6$s6)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp6$n6)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get concept by name" enabled="true">
@@ -833,7 +833,7 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/concept?q=${__V(id${__iterationNum})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/concept?q=${__V(id${n6})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -873,13 +873,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s7</stringProp>
+          <stringProp name="CounterConfig.name">n7</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n7} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -892,7 +892,7 @@ import java.util.*;
 
 String filename = &quot;${url7}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n7});
 
 
 try {
@@ -932,7 +932,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp7$s7)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp7$n7)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get observation for patient" enabled="true">
@@ -983,13 +983,13 @@ catch (Throwable thex) {
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">s8</stringProp>
+          <stringProp name="CounterConfig.name">n8</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n8} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -1002,7 +1002,7 @@ import java.util.*;
 
 String filename = &quot;${url8}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${number});
+log.info(&quot;######count: {}&quot;,${n8});
 
 
 try {
@@ -1042,7 +1042,7 @@ catch (Throwable thex) {
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp8$s8)}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp8$n8)}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get person data" enabled="true">
