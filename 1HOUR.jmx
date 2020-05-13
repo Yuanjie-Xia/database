@@ -198,11 +198,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -319,11 +319,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;DELETE_url2&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;DELETE_url2&quot;)){
     	   	//log.info(&quot;time2: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp2&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -469,11 +469,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url3&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url3&quot;)){
     	   	//log.info(&quot;time3: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp3&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -579,11 +579,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url4&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url4&quot;)){
     	   	//log.info(&quot;time4: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp4&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -689,11 +689,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[0]
-    	   if(group_timestamp[2].equals(&quot;GET_url5&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url5&quot;)){
     	   	//log.info(&quot;time5: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp5&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -799,11 +799,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url6&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url6&quot;)){
     	   	//log.info(&quot;time6: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp6&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -909,11 +909,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url7&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url7&quot;)){
     	   	//log.info(&quot;time7: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp7&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
@@ -1019,11 +1019,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url8&quot;)){
+    	   //if(group_timestamp[2].equals(&quot;GET_url8&quot;)){
     	   	log.info(&quot;time8: {}&quot;,group_timestamp[1]);
     	   	vars.put(&quot;timestamp8&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   }
+    	   //}
         i++;
     }
      bufRdr.close();            
