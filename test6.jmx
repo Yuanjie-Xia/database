@@ -220,23 +220,6 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
-          <stringProp name="filename"></stringProp>
-          <stringProp name="parameters"></stringProp>
-          <boolProp name="resetInterpreter">false</boolProp>
-          <stringProp name="script">rtime = Integer.parseInt(String.valueOf(prev.getTime())); // on first run will raise warning
-delay = Integer.parseInt(vars.get(&quot;timestamp11&quot;);    
-
-Integer sleep = delay - rtime;
-
-log.info( &quot;Sleep for &quot; + sleep.toString() + &quot; milli-seconds&quot; );
-return sleep;  </stringProp>
-        </BeanShellTimer>
-        <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})}</stringProp>
-        </ConstantTimer>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -265,7 +248,25 @@ return sleep;  </stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">rtime = Integer.parseInt(String.valueOf(prev.getTime())); // on first run will raise warning
+delay = Integer.parseInt(vars.get(&quot;timestamp11&quot;);    
+
+Integer sleep = delay - rtime;
+
+log.info( &quot;Sleep for &quot; + sleep.toString() + &quot; milli-seconds&quot; );
+return sleep;  </stringProp>
+          </BeanShellTimer>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})}</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+        </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
