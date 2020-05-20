@@ -194,14 +194,22 @@ try {
     BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
     String line = null;
     Integer i = 1;
+    Integer delay=0;
 
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2] 	   
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);   	   	
+    	   
+    	   	if(i&gt;=2){
+    	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
+    	   		delay= group_timestamp[1]-rtime;
+    	   		}
+    	   	else{
+    	   		delay= group_timestamp[1];
+    	   	}
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
-    	   	
+    	   	vars.put(&quot;timestamp1&quot;+i,delay);
         i++;
     }
      bufRdr.close();            
