@@ -204,6 +204,7 @@ try {
     	   	if(i&gt;=2){
     	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
     	   		delay= group_timestamp[1]-rtime;
+    	   		if(delay&lt;0){delay=0;}
     	   		}
     	   	else{
     	   		delay= group_timestamp[1];
