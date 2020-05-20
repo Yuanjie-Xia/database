@@ -220,15 +220,21 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
           <stringProp name="filename"></stringProp>
           <stringProp name="parameters"></stringProp>
           <boolProp name="resetInterpreter">false</boolProp>
-          <stringProp name="script">double delay=prev.getParent().getTime();</stringProp>
-        </BeanShellPostProcessor>
+          <stringProp name="script">rtime = Integer.parseInt(String.valueOf(prev.getTime())); // on first run will raise warning
+delay = Integer.parseInt(vars.get(${__V(timestamp1${n1})});    
+
+Integer sleep = delay - rtime;
+
+log.info( &quot;Sleep for &quot; + sleep.toString() + &quot; milli-seconds&quot; );
+return sleep;  </stringProp>
+        </BeanShellTimer>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})-delay}</stringProp>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
