@@ -225,7 +225,7 @@ catch (Throwable thex) {
           <stringProp name="parameters"></stringProp>
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="script">rtime = Integer.parseInt(String.valueOf(prev.getTime())); // on first run will raise warning
-delay = Integer.parseInt(vars.get(${__V(timestamp1${n1})});    
+delay = Integer.parseInt(vars.get(&quot;timestamp1&quot;+n1);    
 
 Integer sleep = delay - rtime;
 
