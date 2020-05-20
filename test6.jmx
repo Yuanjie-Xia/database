@@ -143,7 +143,7 @@
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">3599</stringProp>
+        <stringProp name="ThreadGroup.duration">22199</stringProp>
         <stringProp name="ThreadGroup.delay">1</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -167,8 +167,14 @@
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
-        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
-          <stringProp name="BeanShellSampler.query">import java.text.*;
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">import java.text.*;
 import java.io.*;
 import java.lang.*;
 import java.util.*;
@@ -193,8 +199,14 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2] 	   
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
-    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
+    	   	
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
+    	   	long starttime=prev.getStartTime();
+    	   	long endtime=prev.getEndTime();
+    	   	int loadtime=endtime-starttime;
+    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]-loadtime);
+    	   	log.info(&quot;time:{}&quot;,group_timestamp[1]-loadtime);
+    	   	
         i++;
     }
      bufRdr.close();            
@@ -207,11 +219,12 @@ catch (Throwable thex) {
     log.error(thex.getMessage());
 }
 </stringProp>
-          <stringProp name="BeanShellSampler.filename"></stringProp>
-          <stringProp name="BeanShellSampler.parameters"></stringProp>
-          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
-        </BeanShellSampler>
-        <hashTree/>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})}</stringProp>
         </ConstantTimer>
