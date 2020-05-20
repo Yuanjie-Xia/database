@@ -208,6 +208,7 @@ try {
     	   	else{
     	   		delay= group_timestamp[1];
     	   	}
+    	   	log.info(&quot;time1: {}&quot;,delay);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   	vars.put(&quot;timestamp1&quot;+i,delay);
         i++;
