@@ -168,7 +168,7 @@
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${number} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n1} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
