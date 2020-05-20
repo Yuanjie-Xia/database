@@ -200,7 +200,7 @@ try {
     	   //String group=group_timestamp[2] 	   
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);   	   	
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]-loadtime);
+    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	
         i++;
     }
