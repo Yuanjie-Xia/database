@@ -235,13 +235,12 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
-String logDelay=vars.get(&quot;timestamp&quot;+${number});
-log.info(&quot;logDelay: {}&quot;,logDelay)
+
 
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
-        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
+        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters">number:${number}</stringProp>
           <stringProp name="filename"></stringProp>
@@ -250,14 +249,17 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-log.info(&quot;number: {}&quot;,${number})
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
-//log.info(&quot;timestamp: {}&quot;,String.valueOf(duration))
+log.info(&quot;logDelay: {}&quot;,logDelay)
+String pageDelay=vars.get(&quot;duration&quot;);
+log.info(&quot;pageDelay: {}&quot;,pageDelay);
+
+
 
 return logDelay;</stringProp>
         </BeanShellTimer>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
           <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})}</stringProp>
         </ConstantTimer>
         <hashTree/>
