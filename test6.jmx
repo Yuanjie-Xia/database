@@ -235,7 +235,8 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
-log.info(&quot;number: {}&quot;,String.valueOf(number))
+
+//log.info(&quot;number: {}&quot;,number)
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
