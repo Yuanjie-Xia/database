@@ -201,7 +201,7 @@ try {
     	   //String group=group_timestamp[2] 	   
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);   	   	
     	   
-    	   	if(i&gt;=2){
+    	   	/*if(i&gt;=2){
     	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
     	   		delay= group_timestamp[1]-rtime;
     	   		if(delay&lt;0){delay=0;}
@@ -209,9 +209,9 @@ try {
     	   	else{
     	   		delay= group_timestamp[1];
     	   	}
-    	   	log.info(&quot;time1: {}&quot;,delay);
+    	   	log.info(&quot;time1: {}&quot;,delay);*/
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	vars.put(&quot;timestamp1&quot;+i,delay);
+    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
         i++;
     }
      bufRdr.close();            
