@@ -257,7 +257,7 @@ if(Delay&gt;0){
 			break;
 		}
 	}
-	log.info(&quot;Delay: {}&quot;,Delay);
+	//log.info(&quot;Delay: {}&quot;,Delay);
 	}
 
 
