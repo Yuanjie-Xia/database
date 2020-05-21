@@ -195,7 +195,7 @@ try {
     String line = null;
     Integer i = 1;
     Integer pageDelay=0;
-    //log.info(&quot;pageDelay: {}&quot;,pageDelay)
+    log.info(&quot;pageDelay: {}&quot;,pageDelay)
     
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
