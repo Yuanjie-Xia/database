@@ -235,13 +235,12 @@ import java.lang.*;
 import java.util.*;
 
 long duration = prev.getTime();
-
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
 log.info(&quot;logDelay: {}&quot;,logDelay)
-long Delay=Long.parseLong(logDelay);
-Delay=Delay-duration;
-log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
-vars.put(&quot;Delay&quot;, String.valueOf(Delay));
+//long Delay=Long.parseLong(logDelay);
+//Delay=Delay-duration;
+//log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
+//vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
 </stringProp>
         </BeanShellPostProcessor>
