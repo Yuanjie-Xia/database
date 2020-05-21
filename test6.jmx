@@ -246,9 +246,10 @@ if(Delay&lt;0){
 	Delay=0;
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
-	int i=(${number})-1;
-	log.info(&quot;number: {}&quot;,i);	
-	//for(int i=(${number})-1;;i--){
+		
+	for(int i=(${number})-1;i&gt;0;i--){
+		log.info(&quot;number: {}&quot;,i);
+	}
 	//	int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 	//	if(MinusValue&gt;0||i&lt;1){
 	//		break;
