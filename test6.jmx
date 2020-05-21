@@ -132,6 +132,14 @@
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
+      <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+        <stringProp name="filename"></stringProp>
+        <stringProp name="parameters"></stringProp>
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="script">vars.putObject(&quot;minusDelay&quot;,0);
+log.info(&quot;minusDelay: {}&quot;,${minuseDelay});</stringProp>
+      </BeanShellPreProcessor>
+      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url1" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -242,9 +250,10 @@ int Idelay=Integer.parseInt(logDelay);
 int Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.put(&quot;minusDelay&quot;+${number},String.valueOf(Delay));
+	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	}
+
 
 log.info(&quot;Delay: {}&quot;,Delay);
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
