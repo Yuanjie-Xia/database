@@ -203,8 +203,8 @@ try {
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	pageDelay=prev.getTime();
-    	     log.info(&quot;pageDelay: {}&quot;,pageDelay)
+    	   	//pageDelay=prev.getTime();
+    	     //log.info(&quot;pageDelay: {}&quot;,pageDelay)
     	   	
     	   	
     	   }
