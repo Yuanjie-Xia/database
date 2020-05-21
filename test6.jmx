@@ -236,10 +236,10 @@ import java.util.*;
 
 int duration = prev.getTime();
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
-log.info(&quot;logDelay: {}&quot;,logDelay);
+//log.info(&quot;logDelay: {}&quot;,logDelay);
 int Idelay=Integer.parseInt(logDelay);
 int Delay=Idelay-duration;
-log.info(&quot;logDelay: {}&quot;,Delay);
+log.info(&quot;Delay: {}&quot;,Delay);
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
 //vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
