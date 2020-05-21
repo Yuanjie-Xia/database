@@ -234,8 +234,8 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
-vars.put(&quot;duration&quot;, String.valueOf(duration));
-log.info(&quot;pageDelay: {}&quot;,String.valueOf(duration))</stringProp>
+vars.put(&quot;duration&quot;, valueOf(duration));
+log.info(&quot;duration: {}&quot;,String.valueOf(duration))</stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
         <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
