@@ -245,11 +245,12 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
+	vars.putObject(&quot;Delay&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	for(int i=(${number})-1;i&gt;0;i--){
-		log.info(&quot;number: {}&quot;,i);
+		//log.info(&quot;number: {}&quot;,i);
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
@@ -264,6 +265,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
+      vars.putObject(&quot;Delay&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
