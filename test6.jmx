@@ -246,7 +246,7 @@ if(Delay&lt;0){
 	Delay=0;
 	}
 if(Delay&gt;0){
-	for(i=Integer.parseInt(${number})-1;vars.getObject(&quot;minusDelay&quot;+i)&gt;0;i--){
+	for(int i=Integer.parseInt(${number})-1;vars.getObject(&quot;minusDelay&quot;+i)&gt;0;i--){
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&lt;0){
 			Delay=Delay-MinusValue;
