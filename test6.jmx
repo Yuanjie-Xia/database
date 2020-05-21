@@ -247,12 +247,15 @@ if(Delay&lt;0){
 	Delay=0;
 	}
 if(Delay&gt;0){
-	for(int i=(${number})-1;vars.getObject(&quot;minusDelay&quot;+i)&gt;0;i--){
+	for(int i=(${number})-1;i&gt;0;i--){
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&lt;0){
 			Delay=Delay+MinusValue;
 			log.info(&quot;InProcessDelay: {}&quot;,MinusValue);
 			log.info(&quot;InProcessDelay: {}&quot;,Delay);
+		}
+		if(MinusValue&gt;=0){
+			break;
 		}
 	}
 	log.info(&quot;Delay: {}&quot;,Delay);
