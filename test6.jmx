@@ -258,23 +258,72 @@ catch (Throwable thex) {
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="script">rtime = Integer.parseInt(String.valueOf(prev.getTime())); // on first run will raise warning
-delay = Integer.parseInt(vars.get(&quot;timestamp11&quot;);    
-
-Integer sleep = delay - rtime;
-
-log.info( &quot;Sleep for &quot; + sleep.toString() + &quot; milli-seconds&quot; );
-return sleep;  </stringProp>
-          </BeanShellTimer>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+      <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
+        <stringProp name="filename"></stringProp>
+        <stringProp name="parameters"></stringProp>
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="script">import java.text.*;
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+String filename = &quot;${url1}&quot;;
+log.info(&quot;######filename: {}&quot;,filename);
+log.info(&quot;######count: {}&quot;,${n1});
+
+
+try {
+    File file = new File(filename);
+
+    if (!file.exists()) {
+        throw new Exception (&quot;ERROR: file &quot; + filename + &quot; not found&quot;);
+    }
+
+    BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
+    String line = null;
+    Integer i = 1;
+    Integer delay=0;
+
+    while((line = bufRdr.readLine()) != null) {
+    	   String[] group_timestamp = line.split(&quot;,&quot;);
+    	   //String group=group_timestamp[2] 	   
+    	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);   	   	
+    	   
+    	   	/*if(i&gt;=2){
+    	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
+    	   		delay= group_timestamp[1]-rtime;
+    	   		if(delay&lt;0){delay=0;}
+    	   		}
+    	   	else{
+    	   		delay= group_timestamp[1];
+    	   	}
+    	   	log.info(&quot;time1: {}&quot;,delay);*/
+    	   	
+    	   	if(i&gt;1)
+    	   	{
+    	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
+    	   		delay= group_timestamp[1]-rtime;
+    	   		if(delay&lt;0){delay=0;}
+    	   		}
+    	   		else{delay=group_timestamp[1];}
+        i++;
+        return delay
+    }
+     bufRdr.close();            
+}
+catch (Exception ex) {
+    IsSuccess = false; 
+    log.error(ex.getMessage());
+}
+catch (Throwable thex) {
+    log.error(thex.getMessage());
+}
+</stringProp>
+      </BeanShellTimer>
+      <hashTree/>
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
         <stringProp name="ConstantTimer.delay">${__V(timestamp1${n1})}</stringProp>
       </ConstantTimer>
       <hashTree/>
