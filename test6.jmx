@@ -236,7 +236,7 @@ import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
-
+log.info(&quot;logDelay: {}&quot;,logDelay)
 
 </stringProp>
         </BeanShellPostProcessor>
