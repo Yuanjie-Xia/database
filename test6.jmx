@@ -233,14 +233,20 @@ catch (Throwable thex) {
 import java.io.*;
 import java.lang.*;
 import java.util.*;
-long duration = prev.getTime();
-vars.put(&quot;duration&quot;, String.valueOf(duration));
 
+long duration = prev.getTime();
+
+String logDelay=vars.get(&quot;timestamp&quot;+${number});
+log.info(&quot;logDelay: {}&quot;,logDelay)
+long Delay=Long.parseLong(logDelay);
+Delay=Delay-duration;
+log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
+vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
-        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
+        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters">number:${number}</stringProp>
           <stringProp name="filename"></stringProp>
@@ -259,7 +265,7 @@ log.info(&quot;pageDelay: {}&quot;,pageDelay);
 return logDelay;</stringProp>
         </BeanShellTimer>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})}</stringProp>
         </ConstantTimer>
         <hashTree/>
