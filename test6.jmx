@@ -251,7 +251,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		log.info(&quot;number: {}&quot;,i);
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		log.info(&quot;minusDelay:{}&quot;,MinusValue);
-		if(MinusValue=&gt;0){
+		if(MinusValue&gt;=0){
 			}
 		
 	}
