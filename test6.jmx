@@ -235,8 +235,9 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
+String logDelay=vars.get(&quot;timestamp&quot;+${number});
 
-log.info(&quot;number: {}&quot;,${number})
+
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
@@ -249,11 +250,11 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-log.info(&quot;number: {}&quot;,String.valueOf(number))
-//String logDelay=vars.get(&quot;timestamp&quot;+String.valueOf(number));
+log.info(&quot;number: {}&quot;,${number})
+String logDelay=vars.get(&quot;timestamp&quot;+${number});
 //log.info(&quot;timestamp: {}&quot;,String.valueOf(duration))
 
-return 1000;</stringProp>
+return logDelay;</stringProp>
         </BeanShellTimer>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
