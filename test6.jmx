@@ -243,7 +243,6 @@ int Delay=Idelay-duration;
 
 if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
-	log.info(&quot;MinusDelay: {}&quot;,Delay);
 	Delay=0;
 	}
 if(Delay&gt;0){
@@ -251,7 +250,7 @@ if(Delay&gt;0){
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&lt;0){
 			Delay=Delay+MinusValue;
-			log.info(&quot;InProcessDelay: {}&quot;,MinusValue);
+			log.info(&quot;MinusDelay: {}&quot;,MinusValue);
 			log.info(&quot;InProcessDelay: {}&quot;,Delay);
 		}
 		if(MinusValue&gt;=0){
