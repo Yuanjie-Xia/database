@@ -249,7 +249,8 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	for(int i=(${number})-1;i&gt;0;i--){
 		log.info(&quot;number: {}&quot;,i);
-		log.info(&quot;minusDelay:{}&quot;,vars.getObject(&quot;minusDelay&quot;+${number}))
+		int MinusValue=vars.getObject(&quot;minusDelay&quot;+${number});
+		//log.info(&quot;minusDelay:{}&quot;,vars.getObject(&quot;minusDelay&quot;+${number}))
 		
 	}
 	//	int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
