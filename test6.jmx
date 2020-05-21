@@ -194,7 +194,7 @@ try {
     BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
     String line = null;
     Integer i = 1;
-    int pageDelay=0;
+    Integer pageDelay=0;
     log.info(&quot;pageDelay: {}&quot;,pageDelay)
     
     while((line = bufRdr.readLine()) != null) {
