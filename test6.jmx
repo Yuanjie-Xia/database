@@ -254,7 +254,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 			break;
 			}
 		if(MinusValue&lt;0){
-			Delay=Delay-MinusValue;
+			Delay=Delay+MinusValue;
 			log.info(&quot;MinusDelay: {}&quot;,MinusValue);
 			log.info(&quot;InProcessDelay: {}&quot;,Delay);
 			}
