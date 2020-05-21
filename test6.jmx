@@ -245,7 +245,14 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	}
-
+if(Delay&gt;0){
+	for(i=Integer.parseInt(${number})-1;vars.getObject(&quot;minusDelay&quot;+i)&gt;0;i--){
+		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		if(MinusValue&lt;0){
+			Delay=Delay-MinusValue;
+		}
+	}
+	}
 
 log.info(&quot;Delay: {}&quot;,Delay);
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
