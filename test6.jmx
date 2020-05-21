@@ -194,8 +194,6 @@ try {
     BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
     String line = null;
     Integer i = 1;
-    Integer pageDelay=0;
-    log.info(&quot;time1: {}&quot;,pageDelay);
     
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
@@ -204,7 +202,8 @@ try {
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   	if(i&gt;1){
-    	   	long duration = prev.getTime();}
+    	   	long duration = prev.getTime();
+    	   	log.info(&quot;time1: {}&quot;,String.valueOf(duration));}
     	   	//pageDelay=prev.getParent().getTime()
     	     //log.info(&quot;pageDelay: {}&quot;,pageDelay)
     	   	
