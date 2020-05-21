@@ -253,9 +253,10 @@ if(Delay&gt;0){
 			Delay=Delay-MinusValue;
 		}
 	}
+	log.info(&quot;Delay: {}&quot;,Delay);
 	}
 
-log.info(&quot;Delay: {}&quot;,Delay);
+
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
 //vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
