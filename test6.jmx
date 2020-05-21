@@ -234,12 +234,17 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
+
 int duration = prev.getTime();
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
 int Idelay=Integer.parseInt(logDelay);
 int Delay=Idelay-duration;
 log.info(&quot;Delay: {}&quot;,Delay);
+if(Delay&lt;0){
+	vars.put(&quot;minusDelay&quot;+${number},Delay);
+	Delay=0;
+	}
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
 //vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
