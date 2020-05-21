@@ -246,18 +246,12 @@ if(Delay&lt;0){
 	Delay=0;
 	}
 if(Delay&gt;0){
-	int i=(${number})-1;
-	
-	do{
-		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
-		if(MinusValue&lt;0){
+	int i=(${number})-1;	
+	while(int MinusValue=vars.getObject(&quot;minusDelay&quot;+i)&lt;0){
 			Delay=Delay+MinusValue;
 			log.info(&quot;MinusDelay: {}&quot;,MinusValue);
 			log.info(&quot;InProcessDelay: {}&quot;,Delay);
 			i--;
-		}
-	}while{
-		MinusValue&gt;=0;
 	}
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
