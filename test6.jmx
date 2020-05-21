@@ -260,7 +260,7 @@ catch (Throwable thex) {
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
+      <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
         <stringProp name="filename"></stringProp>
         <stringProp name="parameters"></stringProp>
         <boolProp name="resetInterpreter">false</boolProp>
