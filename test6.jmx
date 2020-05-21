@@ -269,9 +269,9 @@ catch (Throwable thex) {
         <stringProp name="filename"></stringProp>
         <stringProp name="parameters">${__V(timestamp1${n1})}</stringProp>
         <boolProp name="resetInterpreter">false</boolProp>
-        <stringProp name="script">int loopNum=Integer.parseInt(vars.get(&quot;n1&quot;));
+        <stringProp name="script">int loopNum=vars.get(&quot;n1&quot;);
 String timeStamp=&quot;timestamp1&quot;+loopNum;
-int logDelay=Integer.parseInt(vars.get(timeStamp));
+int logDelay=vars.get(timeStamp);
 int pageDelay=prev.getParent().getTime();
 int delay=logDelay-pageDelay;
 if (delay&lt;0){delay=0;}
