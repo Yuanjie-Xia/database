@@ -250,8 +250,8 @@ if(Delay&gt;0){
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&lt;0){
 			Delay=Delay+MinusValue;
-			log.info(&quot;MinusDelay: {}&quot;,MinusValue);
-			log.info(&quot;InProcessDelay: {}&quot;,Delay);
+			//log.info(&quot;MinusDelay: {}&quot;,MinusValue);
+			//log.info(&quot;InProcessDelay: {}&quot;,Delay);
 		}
 		if(MinusValue&gt;=0){
 			break;
