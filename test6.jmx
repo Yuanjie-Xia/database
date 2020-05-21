@@ -201,8 +201,6 @@ try {
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	if(i&gt;1){
-    	   	long duration = prev.getTime();}
     	   	//log.info(&quot;time1: {}&quot;,String.valueOf(duration));}
     	   	//pageDelay=prev.getParent().getTime()
     	     //log.info(&quot;pageDelay: {}&quot;,pageDelay)
