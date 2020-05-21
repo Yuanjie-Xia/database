@@ -194,14 +194,16 @@ try {
     BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
     String line = null;
     Integer i = 1;
-
+    int pageDelay=0;
+    log.info(&quot;pageDelay: {}&quot;,pageDelay)
+    
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   	//int pageDelay=prev.getTime();
+    	   	pageDelay=prev.getTime();
     	   
     	   	
     	   	
