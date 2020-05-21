@@ -235,7 +235,7 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
-int number=Integer.parseInt(bsh.arg[0])
+int number=bsh.args[0]
 //log.info(&quot;number: {}&quot;,number)
 </stringProp>
         </BeanShellPostProcessor>
