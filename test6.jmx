@@ -236,8 +236,8 @@ import java.util.*;
 
 long duration = prev.getTime();
 String logDelay=vars.get(&quot;timestamp&quot;+${number});
-log.info(&quot;logDelay: {}&quot;,logDelay)
-long Delay=Long.parseLong(logDelay);
+log.info(&quot;logDelay: {}&quot;,logDelay);
+long delay=(long)logDelay-duration;
 //Delay=Delay-duration;
 //log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
 //vars.put(&quot;Delay&quot;, String.valueOf(Delay));
