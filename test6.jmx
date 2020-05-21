@@ -234,8 +234,8 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
-vars.put(&quot;duration&quot;, duration);
-log.info(&quot;duration: {}&quot;,duration)</stringProp>
+vars.put(&quot;duration&quot;, String.valueOf(duration));
+log.info(&quot;duration: {}&quot;,String.valueOf(duration))</stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
         <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
@@ -253,7 +253,7 @@ logDelay=var.get(&quot;timestamp1&quot;+)
         </BeanShellTimer>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})}-${duration}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
