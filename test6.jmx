@@ -235,7 +235,7 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
-log.info(&quot;duration: {}&quot;,String.valueOf(duration))</stringProp>
+</stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
         <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
@@ -247,13 +247,12 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-long pageDelay=vars.get(&quot;duration&quot;);
-long logDelay=vars.get(&quot;timestamp&quot;);
-long Delay=logDealay-pageDelay;
-if(Delay&lt;0){
-	Delay=0;
-	}
-	return delay;</stringProp>
+String pageDelay=vars.get(&quot;duration&quot;);
+log.info(&quot;duration: {}&quot;,String.valueOf(duration))
+String logDelay=vars.get(&quot;timestamp&quot;);
+log.info(&quot;timestamp: {}&quot;,String.valueOf(duration))
+long Delay=(long)logDealay-(long)pageDelay;
+return delay;</stringProp>
         </BeanShellTimer>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
