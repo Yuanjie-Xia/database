@@ -199,7 +199,7 @@ try {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
     	   if(group_timestamp[2].equals(&quot;POST_url1&quot;)){
-    	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
+    	   	vars.put(&quot;timestamp&quot;,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   	//log.info(&quot;time1: {}&quot;,String.valueOf(duration));}
     	   	//pageDelay=prev.getParent().getTime()
@@ -238,7 +238,7 @@ vars.put(&quot;duration&quot;, String.valueOf(duration));
 log.info(&quot;duration: {}&quot;,String.valueOf(duration))</stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
-        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
+        <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -247,12 +247,16 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-pageDelay=prev.getTime();
-logDelay=var.get(&quot;timestamp1&quot;+)
-</stringProp>
+long pageDelay=vars.get(&quot;duration&quot;);
+long logDelay=vars.get(&quot;timestamp&quot;);
+long Delay=logDealay-pageDelay;
+if(Delay&lt;0){
+	Delay=0;
+	}
+	return delay;</stringProp>
         </BeanShellTimer>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
           <stringProp name="ConstantTimer.delay">${__V(timestamp1${number})-${duration}}</stringProp>
         </ConstantTimer>
         <hashTree/>
