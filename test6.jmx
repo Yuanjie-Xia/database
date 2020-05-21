@@ -243,6 +243,7 @@ int Delay=Idelay-duration;
 
 if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
+	log.info(&quot;MinusDelay: {}&quot;,Delay);
 	Delay=0;
 	}
 if(Delay&gt;0){
