@@ -248,10 +248,10 @@ if(Delay&lt;0){
 if(Delay&gt;0){
 	int i=(${number})-1;	
 	while(int MinusValue=vars.getObject(&quot;minusDelay&quot;+i)&lt;0){
-			Delay=Delay+MinusValue;
-			log.info(&quot;MinusDelay: {}&quot;,MinusValue);
-			log.info(&quot;InProcessDelay: {}&quot;,Delay);
-			i--;
+			//Delay=Delay+MinusValue;
+			//log.info(&quot;MinusDelay: {}&quot;,MinusValue);
+			//log.info(&quot;InProcessDelay: {}&quot;,Delay);
+			//i--;
 	}
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
