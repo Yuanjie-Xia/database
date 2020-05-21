@@ -225,7 +225,7 @@ catch (Throwable thex) {
           </BeanShellSampler>
           <hashTree/>
         </hashTree>
-        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
+        <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
@@ -234,7 +234,8 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
-vars.put(&quot;duration&quot;, String.valueOf(duration));</stringProp>
+vars.put(&quot;duration&quot;, String.valueOf(duration));
+log.info(&quot;pageDelay: {}&quot;,String.valueOf(duration))</stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
         <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="false">
