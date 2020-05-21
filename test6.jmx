@@ -227,7 +227,7 @@ catch (Throwable thex) {
         </hashTree>
         <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
           <boolProp name="resetInterpreter">false</boolProp>
-          <stringProp name="parameters">${number}</stringProp>
+          <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
           <stringProp name="script">import java.text.*;
 import java.io.*;
@@ -235,8 +235,8 @@ import java.lang.*;
 import java.util.*;
 long duration = prev.getTime();
 vars.put(&quot;duration&quot;, String.valueOf(duration));
-int number=bsh.args[0]
-//log.info(&quot;number: {}&quot;,number)
+
+log.info(&quot;number: {}&quot;,${number})
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
