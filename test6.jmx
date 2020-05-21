@@ -155,6 +155,11 @@
               <stringProp name="Argument.value">/home/yuanjiexia/database/url1.csv</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
+            <elementProp name="n1" elementType="Argument">
+              <stringProp name="Argument.name">n1</stringProp>
+              <stringProp name="Argument.value">${n1}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
           </collectionProp>
         </Arguments>
         <hashTree/>
@@ -262,65 +267,15 @@ catch (Throwable thex) {
       </hashTree>
       <BeanShellTimer guiclass="TestBeanGUI" testclass="BeanShellTimer" testname="BeanShell Timer" enabled="true">
         <stringProp name="filename"></stringProp>
-        <stringProp name="parameters"></stringProp>
+        <stringProp name="parameters">${__V(timestamp1${n1})}</stringProp>
         <boolProp name="resetInterpreter">false</boolProp>
-        <stringProp name="script">import java.text.*;
-import java.io.*;
-import java.lang.*;
-import java.util.*;
-
-String filename = &quot;${url1}&quot;;
-log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${n1});
-
-
-try {
-    File file = new File(filename);
-
-    if (!file.exists()) {
-        throw new Exception (&quot;ERROR: file &quot; + filename + &quot; not found&quot;);
-    }
-
-    BufferedReader bufRdr = new BufferedReader(new InputStreamReader(new FileInputStream(file),&quot;UTF-8&quot;));
-    String line = null;
-    Integer i = 1;
-    Integer delay=0;
-
-    while((line = bufRdr.readLine()) != null) {
-    	   String[] group_timestamp = line.split(&quot;,&quot;);
-    	   //String group=group_timestamp[2] 	   
-    	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);   	   	
-    	   
-    	   	/*if(i&gt;=2){
-    	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
-    	   		delay= group_timestamp[1]-rtime;
-    	   		if(delay&lt;0){delay=0;}
-    	   		}
-    	   	else{
-    	   		delay= group_timestamp[1];
-    	   	}
-    	   	log.info(&quot;time1: {}&quot;,delay);*/
-    	   	
-    	   	if(i&gt;1)
-    	   	{
-    	   		rtime = Integer.parseInt(String.valueOf(prev.getTime()));
-    	   		delay= group_timestamp[1]-rtime;
-    	   		if(delay&lt;0){delay=0;}
-    	   		}
-    	   		else{delay=group_timestamp[1];}
-        i++;
-        return delay
-    }
-     bufRdr.close();            
-}
-catch (Exception ex) {
-    IsSuccess = false; 
-    log.error(ex.getMessage());
-}
-catch (Throwable thex) {
-    log.error(thex.getMessage());
-}
-</stringProp>
+        <stringProp name="script">int loopNum=Integer.parseInt(vars.get(&quot;n1&quot;));
+String timeStamp=&quot;timestamp1&quot;+loopNum;
+int logDelay=Integer.parseInt(vars.get(timeStamp));
+int pageDelay=prev.getParent().getTime();
+int delay=logDelay-pageDelay;
+if (delay&lt;0){delay=0;}
+return delay;</stringProp>
       </BeanShellTimer>
       <hashTree/>
       <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
