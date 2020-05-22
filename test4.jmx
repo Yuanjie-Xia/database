@@ -276,7 +276,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelayOne&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -296,7 +296,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelayOne&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -309,7 +309,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n1})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelayOne${n1})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
@@ -468,7 +468,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelayThree&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -488,7 +488,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelayThree&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -501,7 +501,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n3})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelayThree${n3})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search person" enabled="true">
@@ -620,7 +620,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelayFour&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -640,7 +640,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelayFour&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -653,7 +653,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n4})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelayFour${n4})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="get by encounter type " enabled="true">
@@ -772,7 +772,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelayFive&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -792,7 +792,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelayFive&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -805,7 +805,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n5})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelayFive${n5})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get encounter for patient" enabled="true">
@@ -924,7 +924,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelaySix&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -944,7 +944,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelaySix&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -957,7 +957,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n6})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelaySix${n6})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get concept by name" enabled="true">
@@ -1076,7 +1076,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelaySeven&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -1096,7 +1096,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelaySeven&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -1109,7 +1109,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n7})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelaySeven${n7})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get observation for patient" enabled="true">
@@ -1228,7 +1228,7 @@ if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${number},Delay);
+	vars.putObject(&quot;DelayEight&quot;+${number},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${number}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${number},Delay);
@@ -1248,7 +1248,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${number},Delay);
+      vars.putObject(&quot;DelayEight&quot;+${number},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -1261,7 +1261,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n8})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(DelayEight${n8})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get person data" enabled="true">
