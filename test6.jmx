@@ -278,7 +278,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${number})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(timestamp${number})}</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add person" enabled="true">
