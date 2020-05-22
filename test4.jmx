@@ -338,7 +338,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
@@ -368,7 +368,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -520,7 +520,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -672,7 +672,7 @@ if(Delay&gt;0&amp;&amp;(${n4}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -824,7 +824,7 @@ if(Delay&gt;0&amp;&amp;(${n5}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -976,7 +976,7 @@ if(Delay&gt;0&amp;&amp;(${n6}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -1128,7 +1128,7 @@ if(Delay&gt;0&amp;&amp;(${n7}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
@@ -1280,7 +1280,7 @@ if(Delay&gt;0&amp;&amp;(${n8}!=1)){
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout">1000</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
