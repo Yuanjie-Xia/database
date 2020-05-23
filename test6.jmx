@@ -320,6 +320,7 @@ if(Delay&gt;0&amp;&amp;(${number}!=1)){
           <boolProp name="clearEachIteration">true</boolProp>
           <boolProp name="useExpires">true</boolProp>
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
+          <intProp name="maxSize">500</intProp>
         </CacheManager>
         <hashTree/>
       </hashTree>
