@@ -123,13 +123,13 @@
       <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
         <collectionProp name="CookieManager.cookies"/>
         <boolProp name="CookieManager.clearEachIteration">false</boolProp>
-        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">true</boolProp>
       </CookieManager>
       <hashTree/>
       <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
         <boolProp name="clearEachIteration">true</boolProp>
-        <boolProp name="useExpires">false</boolProp>
-        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <boolProp name="CacheManager.controlledByThread">true</boolProp>
       </CacheManager>
       <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User1" enabled="true">
@@ -347,7 +347,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url3" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url4" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -356,22 +356,22 @@
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">180</stringProp>
-        <stringProp name="ThreadGroup.delay">3</stringProp>
+        <stringProp name="ThreadGroup.duration">3600</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter3" enabled="true">
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter4" enabled="true">
           <stringProp name="CounterConfig.start">1</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
           <stringProp name="CounterConfig.incr">1</stringProp>
-          <stringProp name="CounterConfig.name">n3</stringProp>
+          <stringProp name="CounterConfig.name">n4</stringProp>
           <stringProp name="CounterConfig.format"></stringProp>
           <boolProp name="CounterConfig.per_user">true</boolProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">${__groovy(${n3} == 1,)}</stringProp>
+          <stringProp name="IfController.condition">${__groovy(${n4} == 1,)}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
@@ -382,9 +382,9 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
-String filename = &quot;${url3One}&quot;;
+String filename = &quot;${url4One}&quot;;
 log.info(&quot;######filename: {}&quot;,filename);
-log.info(&quot;######count: {}&quot;,${n3});
+log.info(&quot;######count: {}&quot;,${n4});
 
 
 try {
@@ -401,9 +401,9 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;GET_url3&quot;)){
-    	   	//log.info(&quot;time3: {}&quot;,group_timestamp[0]);
-    	   	vars.put(&quot;timestamp3&quot;+i,group_timestamp[1]);
+    	   if(group_timestamp[2].equals(&quot;GET_url4&quot;)){
+    	   	//log.info(&quot;time4: {}&quot;,group_timestamp[0]);
+    	   	vars.put(&quot;timestamp4&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
     	   }
         i++;
@@ -434,20 +434,20 @@ import java.util.*;
 
 
 int duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp3&quot;+${n3});
+String logDelay=vars.get(&quot;timestamp4&quot;+${n4});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
 int Idelay=Integer.parseInt(logDelay);
 int Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n4},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n3},Delay);
+	vars.putObject(&quot;Delay&quot;+${n4},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n3}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
-	for(int i=(${n3})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n4}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n4},Delay);
+	for(int i=(${n4})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
 		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
@@ -463,7 +463,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n3},Delay);
+      vars.putObject(&quot;Delay&quot;+${n4},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -476,10 +476,10 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
         </BeanShellPostProcessor>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">${__V(Delay${n3})}</stringProp>
+          <stringProp name="ConstantTimer.delay">${__V(Delay${n4})}</stringProp>
         </ConstantTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search person" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="get by encounter type " enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -487,7 +487,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/person?q=${__V(id${n3})}</stringProp>
+          <stringProp name="HTTPSampler.path">openmrs/ws/rest/v1/encountertype?q=${__V(id${n4})}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
