@@ -1,3 +1,8 @@
 
 *.RData
 .Rhistory
+teastore.zip
+.DS_Store
+teastore/GET.csv
+teastore/POST.csv
+.DS_Store
