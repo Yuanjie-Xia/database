@@ -363,7 +363,7 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   if(group_timestamp[2].equals(&quot;PO&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_LA&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
