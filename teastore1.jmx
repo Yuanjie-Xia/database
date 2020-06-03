@@ -1305,8 +1305,8 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 		
 		
 	}
-      log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n1},Delay);
+      //log.info(&quot;Delay: {}&quot;,Delay);
+      //vars.putObject(&quot;Delay&quot;+${n1},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
