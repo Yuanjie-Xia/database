@@ -88,62 +88,62 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="url1" elementType="Argument">
             <stringProp name="Argument.name">url1</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWS.csv.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWS5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url2" elementType="Argument">
             <stringProp name="Argument.name">url2</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWPR.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWPR5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url3" elementType="Argument">
             <stringProp name="Argument.name">url3</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWD.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWD5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url4" elementType="Argument">
             <stringProp name="Argument.name">url4</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETW.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETW5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url5" elementType="Argument">
             <stringProp name="Argument.name">url5</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWL.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWL5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url6" elementType="Argument">
             <stringProp name="Argument.name">url6</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWLA.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWLA5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url7" elementType="Argument">
             <stringProp name="Argument.name">url7</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWCQ.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWCQ5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url8" elementType="Argument">
             <stringProp name="Argument.name">url8</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWPQ.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWPQ5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url9" elementType="Argument">
             <stringProp name="Argument.name">url9</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWC.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWC5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url10" elementType="Argument">
             <stringProp name="Argument.name">url10</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWCA.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWCA5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url11" elementType="Argument">
             <stringProp name="Argument.name">url11</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWC.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWC5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url12" elementType="Argument">
             <stringProp name="Argument.name">url12</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWO.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/POSTWO5.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
