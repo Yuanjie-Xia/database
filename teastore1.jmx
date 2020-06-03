@@ -1312,7 +1312,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 	
 
 
-log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
+//log.info(&quot;Delay: {}&quot;,String.valueOf(Delay));
 //vars.put(&quot;Delay&quot;, String.valueOf(Delay));
 
 </stringProp>
