@@ -255,11 +255,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_S&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_S&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -408,11 +408,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_PR&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_PR&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -561,11 +561,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_D&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_D&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -714,11 +714,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -867,11 +867,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_L&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_L&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1020,11 +1020,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;POST_W_LA&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_LA&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1188,11 +1188,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;POST_W_LA&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_LA&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1349,11 +1349,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_CQ&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_CQ&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1517,11 +1517,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_PQ&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_PQ&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1678,11 +1678,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;POST_W_C&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_C&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -1854,11 +1854,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;POST_W_CA&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_CA&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -2022,11 +2022,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;GET_W_C&quot;)){
+    	   if(group_timestamp[2].equals(&quot;GET_W_C&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -2175,11 +2175,11 @@ try {
     while((line = bufRdr.readLine()) != null) {
     	   String[] group_timestamp = line.split(&quot;,&quot;);
     	   //String group=group_timestamp[2]
-    	   //if(group_timestamp[2].equals(&quot;POST_W_O&quot;)){
+    	   if(group_timestamp[2].equals(&quot;POST_W_O&quot;)){
     	   	//log.info(&quot;time1: {}&quot;,group_timestamp[0]);
     	   	vars.put(&quot;timestamp1&quot;+i,group_timestamp[1]);
     	   	vars.put(&quot;id&quot;+i,group_timestamp[3]);
-    	   //}
+    	   }
         i++;
     }
      bufRdr.close();            
@@ -2222,7 +2222,7 @@ catch (Throwable thex) {
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -2255,7 +2255,7 @@ catch (Throwable thex) {
         <stringProp name="filename">result/result.jtl</stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
