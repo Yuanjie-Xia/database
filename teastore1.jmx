@@ -118,7 +118,7 @@
           </elementProp>
           <elementProp name="url7" elementType="Argument">
             <stringProp name="Argument.name">url7</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWCQ1.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/teastore/GETWcq1.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url8" elementType="Argument">
