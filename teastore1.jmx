@@ -2326,7 +2326,7 @@ catch (Throwable thex) {
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">result/summary.xml</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
