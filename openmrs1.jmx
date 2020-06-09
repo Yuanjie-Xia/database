@@ -1908,23 +1908,23 @@ import java.lang.*;
 import java.util.*;
 
 
-int duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp3&quot;+${n3});
+long duration = prev.getTime();
+String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-int Idelay=Integer.parseInt(logDelay);
-int Delay=Idelay-duration;
+long Idelay=Long.parseLong(logDelay);
+long Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n3},Delay);
+	vars.putObject(&quot;Delay&quot;+${n1},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n3}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
-	for(int i=(${n3})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n1}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
+	for(int i=(${n1})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
@@ -1938,7 +1938,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n3},Delay);
+      vars.putObject(&quot;Delay&quot;+${n1},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -2820,23 +2820,23 @@ import java.lang.*;
 import java.util.*;
 
 
-int duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp4&quot;+${n4});
+long duration = prev.getTime();
+String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-int Idelay=Integer.parseInt(logDelay);
-int Delay=Idelay-duration;
+long Idelay=Long.parseLong(logDelay);
+long Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n4},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n4},Delay);
+	vars.putObject(&quot;Delay&quot;+${n1},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n4}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n4},Delay);
-	for(int i=(${n4})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n1}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
+	for(int i=(${n1})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
@@ -2850,7 +2850,7 @@ if(Delay&gt;0&amp;&amp;(${n4}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n4},Delay);
+      vars.putObject(&quot;Delay&quot;+${n1},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -3646,7 +3646,7 @@ if(Delay&gt;0&amp;&amp;(${n5}!=1)){
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url5" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url5" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4558,7 +4558,7 @@ if(Delay&gt;0&amp;&amp;(${n6}!=1)){
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url6" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url6" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5470,7 +5470,7 @@ if(Delay&gt;0&amp;&amp;(${n7}!=1)){
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url7" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url7" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6382,7 +6382,7 @@ if(Delay&gt;0&amp;&amp;(${n8}!=1)){
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url8" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="url8" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
