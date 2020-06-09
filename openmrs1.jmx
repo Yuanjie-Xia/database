@@ -836,7 +836,7 @@ int Delay=Idelay-duration;
 if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
 	Delay=0;
-	log.info(&quot;Delay: {}&quot;,Delay);
+	//log.info(&quot;Delay: {}&quot;,Delay);
 	vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
 if(Delay&gt;0&amp;&amp;(${n3}!=1)){
