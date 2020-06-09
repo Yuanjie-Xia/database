@@ -827,11 +827,11 @@ import java.lang.*;
 import java.util.*;
 
 
-int duration = prev.getTime();
+long duration = prev.getTime();
 String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-int Idelay=Integer.parseInt(logDelay);
-int Delay=Idelay-duration;
+long Idelay=Long.parseLong(logDelay);
+long Delay=Idelay-duration;
 
 if(Delay&lt;0){
 	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
@@ -843,7 +843,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
 	for(int i=(${n1})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
