@@ -827,23 +827,23 @@ import java.lang.*;
 import java.util.*;
 
 
-long duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
+int duration = prev.getTime();
+String logDelay=vars.get(&quot;timestamp3&quot;+${n3});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-long Idelay=Long.parseLong(logDelay);
-long Delay=Idelay-duration;
+int Idelay=Integer.parseInt(logDelay);
+int Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n1},Delay);
+	vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n1}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
-	for(int i=(${n1})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n3}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
+	for(int i=(${n3})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
@@ -857,7 +857,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n1},Delay);
+      vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -1908,23 +1908,23 @@ import java.lang.*;
 import java.util.*;
 
 
-long duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
+int duration = prev.getTime();
+String logDelay=vars.get(&quot;timestamp3&quot;+${n3});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-long Idelay=Long.parseLong(logDelay);
-long Delay=Idelay-duration;
+int Idelay=Integer.parseInt(logDelay);
+int Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n1},Delay);
+	vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n1}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
-	for(int i=(${n1})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n3}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
+	for(int i=(${n3})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
@@ -1938,7 +1938,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n1},Delay);
+      vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
@@ -2820,23 +2820,23 @@ import java.lang.*;
 import java.util.*;
 
 
-long duration = prev.getTime();
-String logDelay=vars.get(&quot;timestamp1&quot;+${n1});
+int duration = prev.getTime();
+String logDelay=vars.get(&quot;timestamp3&quot;+${n3});
 //log.info(&quot;logDelay: {}&quot;,logDelay);
-long Idelay=Long.parseLong(logDelay);
-long Delay=Idelay-duration;
+int Idelay=Integer.parseInt(logDelay);
+int Delay=Idelay-duration;
 
 if(Delay&lt;0){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
 	Delay=0;
 	log.info(&quot;Delay: {}&quot;,Delay);
-	vars.putObject(&quot;Delay&quot;+${n1},Delay);
+	vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
-if(Delay&gt;0&amp;&amp;(${n1}!=1)){
-	vars.putObject(&quot;minusDelay&quot;+${n1},Delay);
-	for(int i=(${n1})-1;i&gt;0;i--){
+if(Delay&gt;0&amp;&amp;(${n3}!=1)){
+	vars.putObject(&quot;minusDelay&quot;+${n3},Delay);
+	for(int i=(${n3})-1;i&gt;0;i--){
 		//log.info(&quot;number: {}&quot;,i);
-		long MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
+		int MinusValue=vars.getObject(&quot;minusDelay&quot;+i);
 		if(MinusValue&gt;=0){
 			break;
 			}
@@ -2850,7 +2850,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
 		
 	}
       log.info(&quot;Delay: {}&quot;,Delay);
-      vars.putObject(&quot;Delay&quot;+${n1},Delay);
+      vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
 	
