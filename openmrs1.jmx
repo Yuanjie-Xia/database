@@ -856,7 +856,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
 		
 		
 	}
-      log.info(&quot;Delay: {}&quot;,Delay);
+      //log.info(&quot;Delay: {}&quot;,Delay);
       vars.putObject(&quot;Delay&quot;+${n3},Delay);
 	}
 	//log.info(&quot;Delay: {}&quot;,Delay);
