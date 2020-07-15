@@ -137,37 +137,37 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="url1" elementType="Argument">
             <stringProp name="Argument.name">url1</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url12.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url12.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url3" elementType="Argument">
             <stringProp name="Argument.name">url3</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url32.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url32.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url4" elementType="Argument">
             <stringProp name="Argument.name">url4</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url42.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url42.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url5" elementType="Argument">
             <stringProp name="Argument.name">url5</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url52.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url52.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url6" elementType="Argument">
             <stringProp name="Argument.name">url6</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url62.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url62.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url7" elementType="Argument">
             <stringProp name="Argument.name">url7</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url72.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url72.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="url8" elementType="Argument">
             <stringProp name="Argument.name">url8</stringProp>
-            <stringProp name="Argument.value">/home/yuanjiexia/database/url/6url82.csv</stringProp>
+            <stringProp name="Argument.value">/home/yuanjiexia/database/url/1url82.csv</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -184,7 +184,7 @@
         <longProp name="ThreadGroup.start_time">1438456152000</longProp>
         <longProp name="ThreadGroup.end_time">1438456152000</longProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -377,7 +377,7 @@ if(Delay&gt;0&amp;&amp;(${n1}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -529,7 +529,7 @@ if(Delay&gt;0&amp;&amp;(${n3}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -681,7 +681,7 @@ if(Delay&gt;0&amp;&amp;(${n4}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">1</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -833,7 +833,7 @@ if(Delay&gt;0&amp;&amp;(${n5}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -985,7 +985,7 @@ if(Delay&gt;0&amp;&amp;(${n6}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -1137,7 +1137,7 @@ if(Delay&gt;0&amp;&amp;(${n7}!=1)){
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">0</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">4200</stringProp>
+        <stringProp name="ThreadGroup.duration">22200</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
